@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0D463020-B71E-4DC3-9443-EADAECCE41EE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MuonLab.Web.Mvc.Tests</RootNamespace>
+    <AssemblyName>MuonLab.Web.Mvc.Tests</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.5.7.10213, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\NUnit\framework\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\RhinoMocks-3.6\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap, Version=2.5.4.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Structure Map\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\ASP.NET MVC\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ModelBinding\when_binding_a_enum_flags_property.cs" />
+    <Compile Include="ModelBinding\when_binding_enumerablestring_properties.cs" />
+    <Compile Include="ModelBinding\when_binding_enumerable_properties.cs" />
+    <Compile Include="ModelBinding\when_binding_nested_nested_simple_properties.cs" />
+    <Compile Include="ModelBinding\when_binding_nested_simple_properties.cs" />
+    <Compile Include="ModelBinding\TestClasses.cs" />
+    <Compile Include="ModelBinding\when_binding_simple_properties.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MuonLab.Commons.StructureMap\MuonLab.Commons.StructureMap.csproj">
+      <Project>{34066F38-D668-43CB-BAC2-129E88B59E6C}</Project>
+      <Name>MuonLab.Commons.StructureMap</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MuonLab.Commons\MuonLab.Commons.csproj">
+      <Project>{1BABD557-40B3-4B98-881D-3D919E2790C1}</Project>
+      <Name>MuonLab.Commons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MuonLab.Testing\MuonLab.Testing.csproj">
+      <Project>{467034A7-7E3B-471D-AA85-C957B559B72D}</Project>
+      <Name>MuonLab.Testing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MuonLab.Validation\MuonLab.Validation.csproj">
+      <Project>{0B48AFFA-3213-42DC-8B4F-4D1696C35412}</Project>
+      <Name>MuonLab.Validation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MuonLab.Web.Mvc\MuonLab.Web.Mvc.csproj">
+      <Project>{887FA3DA-1033-4142-A0B1-B2152F98B9BC}</Project>
+      <Name>MuonLab.Web.Mvc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

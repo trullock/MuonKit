@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CBA33D4C-EEDF-46CD-B5DD-C7DD3D424F3E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MuonLab.Web.Xhtml.Tests</RootNamespace>
+    <AssemblyName>MuonLab.Web.Xhtml.Tests</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.5.7.10213, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\NUnit\framework\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\RhinoMocks-3.6\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComponentFactorySpecifications\ComponentFactorySpecification.cs" />
+    <Compile Include="Components\ComponentSpecifications\ComponentSpecification.cs" />
+    <Compile Include="Components\ComponentSpecifications\AddClassSpecification.cs" />
+    <Compile Include="Components\ComponentSpecifications\AddClassWithExistingClassSpecification.cs" />
+    <Compile Include="Components\ComponentSpecifications\ComponentTSpecification.cs" />
+    <Compile Include="Components\ComponentSpecifications\TestVisibleComponent.cs" />
+    <Compile Include="Components\ComponentSpecifications\VisibleComponentSpecification.cs" />
+    <Compile Include="Components\ComponentSpecifications\WithLabelSpecification.cs" />
+    <Compile Include="Components\ComponentSpecifications\WithAttrForNameSpecification.cs" />
+    <Compile Include="Components\ComponentSpecifications\DisabledSpecification.cs" />
+    <Compile Include="Components\ComponentSpecifications\TestComponent.cs" />
+    <Compile Include="Components\ComponentSpecifications\WithAttrSpecification.cs" />
+    <Compile Include="Components\ComponentSpecifications\WithClassSpecification.cs" />
+    <Compile Include="Components\ComponentSpecifications\WithNameSpecification.cs" />
+    <Compile Include="Components\ComponentSpecifications\WithIdSpecification.cs" />
+    <Compile Include="Components\ComponentSpecifications\WithValueAttributeSpecification.cs" />
+    <Compile Include="Components\FileUploadspecifications\DefaultSpecification.cs" />
+    <Compile Include="Components\FormattableComponentSpecifications\FormattedAsStringSpecification.cs" />
+    <Compile Include="Components\FormattableComponentSpecifications\FormattableComponentTSpecification.cs" />
+    <Compile Include="Components\FormattableComponentSpecifications\FormattableComponentSpecification.cs" />
+    <Compile Include="Components\FormattableComponentSpecifications\FormatWithSpecification.cs" />
+    <Compile Include="Components\HiddenFieldSpecifications\DisabledSpecification.cs" />
+    <Compile Include="Components\HiddenFieldSpecifications\WithAttrSpecification.cs" />
+    <Compile Include="Components\HiddenFieldSpecifications\WithClassSpecification.cs" />
+    <Compile Include="Components\HiddenFieldSpecifications\WithIdSpecification.cs" />
+    <Compile Include="Components\HiddenFieldSpecifications\WithNameSpecification.cs" />
+    <Compile Include="Components\HiddenFieldSpecifications\WithValueSpecification.cs" />
+    <Compile Include="Components\PasswordBoxSpecificaitons\AllowAutocompletionSpecification.cs" />
+    <Compile Include="Components\PasswordBoxSpecificaitons\DefaultSpecification.cs" />
+    <Compile Include="Components\PasswordBoxSpecificaitons\PreventAutocompletionSpecification.cs" />
+    <Compile Include="Components\TextBoxSpecifications\AllowAutocompletionSpecification.cs" />
+    <Compile Include="Components\TextBoxSpecifications\ShowDefaultAsEmptySpecification.cs" />
+    <Compile Include="Components\TextBoxSpecifications\FormattedAsSpecification.cs" />
+    <Compile Include="Components\TextBoxSpecifications\FormatWithSpecificaiton.cs" />
+    <Compile Include="Components\TextBoxSpecifications\PreventAutocompletionSpecification.cs" />
+    <Compile Include="Components\VisibleComponentSpecifications\RenderingOrderSpecification.cs" />
+    <Compile Include="Configuration\FormConfigurationSpecifications\Initialize\when_initializing_IVisibleComponent.cs" />
+    <Compile Include="Configuration\FormConfigurationSpecifications\Initialize\when_initializing_IComponentT.cs" />
+    <Compile Include="Configuration\FormConfigurationSpecifications\Initialize\when_initializing_IComponent.cs" />
+    <Compile Include="FishAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestEntity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MuonLab.Testing\MuonLab.Testing.csproj">
+      <Project>{467034A7-7E3B-471D-AA85-C957B559B72D}</Project>
+      <Name>MuonLab.Testing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MuonLab.Web.Xhtml\MuonLab.Web.Xhtml.csproj">
+      <Project>{23A417A9-C102-44AE-BF68-6E42E5E998B9}</Project>
+      <Name>MuonLab.Web.Xhtml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MuonLab.Web\MuonLab.Web.csproj">
+      <Project>{BCBBFC69-CE36-4262-AD8D-3A57DBF9FD03}</Project>
+      <Name>MuonLab.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

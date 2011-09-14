@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{887FA3DA-1033-4142-A0B1-B2152F98B9BC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MuonLab.Web.Mvc</RootNamespace>
+    <AssemblyName>MuonLab.Web.Mvc</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\ASP.NET MVC\System.Web.Abstractions.dll</HintPath>
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\ASP.NET MVC\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\ASP.NET MVC\System.Web.Routing.dll</HintPath>
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ModelBinding\ResourceModelBinder.cs" />
+    <Compile Include="NHibernateControllerFactory.cs" />
+    <Compile Include="Security\ValidateRequestAttribute.cs" />
+    <Compile Include="ResourceModelBinderComponentAndViolationNameResolver.cs" />
+    <Compile Include="BaseController.cs" />
+    <Compile Include="ModelBinding\Binder.cs" />
+    <Compile Include="ModelBinding\BinderException.cs" />
+    <Compile Include="ModelBinding\GenericEnumerable.cs" />
+    <Compile Include="ModelBinding\HttpFileCollectionBaseModelBinder.cs" />
+    <Compile Include="ModelBinding\QueryStringCollectionModelBinder.cs" />
+    <Compile Include="ModelBinding\Interception\DefaultInterceptor.cs" />
+    <Compile Include="ModelBinding\Interception\IInterceptionAction.cs" />
+    <Compile Include="ModelBinding\Interception\IInterceptor.cs" />
+    <Compile Include="ModelBinding\Interception\InterceptionAction.cs" />
+    <Compile Include="ModelBinding\Interception\Interceptor.cs" />
+    <Compile Include="MvcErrorProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryStringCollection.cs" />
+    <Compile Include="DependencyResolvingControllerFactory.cs" />
+    <Compile Include="ShortGuids\ShortGuidModelBinder.cs" />
+    <Compile Include="SensibleValueFormattingRoute.cs" />
+    <Compile Include="ShortGuidRouteExtensions.cs" />
+    <Compile Include="UrlHelperExtensions.cs" />
+    <Compile Include="Validation\ValidationExtensions.cs" />
+    <Compile Include="Xhtml\HtmlHelperExtensions.cs" />
+    <Compile Include="Xhtml\ViewControlT.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Xhtml\ViewT.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MuonLab.Commons\MuonLab.Commons.csproj">
+      <Project>{1BABD557-40B3-4B98-881D-3D919E2790C1}</Project>
+      <Name>MuonLab.Commons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MuonLab.NHibernate\MuonLab.NHibernate.csproj">
+      <Project>{F09CFAD6-49F1-41C2-9D62-624A363AC16F}</Project>
+      <Name>MuonLab.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MuonLab.Validation\MuonLab.Validation.csproj">
+      <Project>{0B48AFFA-3213-42DC-8B4F-4D1696C35412}</Project>
+      <Name>MuonLab.Validation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MuonLab.Web.Xhtml\MuonLab.Web.Xhtml.csproj">
+      <Project>{23A417A9-C102-44AE-BF68-6E42E5E998B9}</Project>
+      <Name>MuonLab.Web.Xhtml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MuonLab.Web\MuonLab.Web.csproj">
+      <Project>{BCBBFC69-CE36-4262-AD8D-3A57DBF9FD03}</Project>
+      <Name>MuonLab.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{57A072F6-0D2A-4DF8-969C-B9703CE01F80}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MuonLab.Commons.Tests</RootNamespace>
+    <AssemblyName>MuonLab.Commons.Tests</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.5.7.10213, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\NUnit\framework\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationTime\Today.cs" />
+    <Compile Include="ApplicationTime\Now.cs" />
+    <Compile Include="Cryptography\CryptoServiceFixture.cs" />
+    <Compile Include="Cryptography\When_hashing_a_password_with_md5.cs" />
+    <Compile Include="Cryptography\When_hashing_a_password_with_sha1.cs" />
+    <Compile Include="Cryptography\When_hashing_a_password_with_sha256.cs" />
+    <Compile Include="Cryptography\When_hashing_a_password_with_sha384.cs" />
+    <Compile Include="Cryptography\When_hashing_a_password_with_sha512.cs" />
+    <Compile Include="English\BoolSpecification.cs" />
+    <Compile Include="English\MemberInfoSpecification.cs" />
+    <Compile Include="English\NullableTypeSpecification.cs" />
+    <Compile Include="English\TypeSpecification.cs" />
+    <Compile Include="EnumEnumerator\WeaklyTyped.cs" />
+    <Compile Include="EnumEnumerator\StronglyTyped.cs" />
+    <Compile Include="Extensions\ObjectToDictionaryExtensionSpecification.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflection\GetMemberInfo.cs" />
+    <Compile Include="Reflection\GetPropertyName.cs" />
+    <Compile Include="Reflection\GetPropertyValue.cs" />
+    <Compile Include="Reflection\PropertyChainToString.cs" />
+    <Compile Include="ShortGuids\Default.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MuonLab.Commons\MuonLab.Commons.csproj">
+      <Project>{1BABD557-40B3-4B98-881D-3D919E2790C1}</Project>
+      <Name>MuonLab.Commons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MuonLab.NHibernate\MuonLab.NHibernate.csproj">
+      <Project>{F09CFAD6-49F1-41C2-9D62-624A363AC16F}</Project>
+      <Name>MuonLab.NHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MuonLab.Testing\MuonLab.Testing.csproj">
+      <Project>{467034A7-7E3B-471D-AA85-C957B559B72D}</Project>
+      <Name>MuonLab.Testing</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Extensions\CommonServiceLocatorExtensions\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
